@@ -20,3 +20,8 @@ jobs:
         pip install requests
     - name: Run script
       run: python new.py
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: news_clipping
+        path: /home/runner/work/apis/apis/news_clipping/news_results_*.html
