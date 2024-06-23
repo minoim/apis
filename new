@@ -8,7 +8,7 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 # 로그 파일 경로 설정
-log_file = "/home/ApisHive/news_clipping_log.txt"
+log_file = "/home/runner/work/apis/apis/news_clipping_log.txt"
 
 # 스크립트 시작 로그 기록
 with open(log_file, "a") as file:
@@ -137,7 +137,7 @@ html_content += """
 # 현재 날짜와 시간을 포맷에 맞게 문자열로 변환
 current_datetime_str = datetime.now().strftime("%Y%m%d_%H%M%S")
 # HTML 파일 저장 경로 설정 (날짜와 시간 포함)
-directory = "/home/ApisHive/news_clipping"
+directory = "/home/runner/work/apis/apis/news_clipping"
 if not os.path.exists(directory):
     os.makedirs(directory)
 file_path = f"{directory}/news_results_{current_datetime_str}.html"
